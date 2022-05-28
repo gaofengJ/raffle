@@ -35,7 +35,7 @@ const Order = () => {
 
   useDidMount(() => {
     const menuStorage: string[] = JSON.parse(
-      localStorage.getItem('menus') || '[]',
+      localStorage.getItem('raffles') || '[]',
     );
     setMenuArr(menuStorage.length ? menuStorage : menus);
   });

@@ -27,7 +27,7 @@ const Settings = () => {
   };
 
   const handleConfirm = () => {
-    localStorage.setItem('menus', JSON.stringify(menuArr));
+    localStorage.setItem('raffles', JSON.stringify(menuArr));
     Toast.show({
       content: '修改成功',
       icon: 'success',
@@ -40,7 +40,7 @@ const Settings = () => {
 
   useDidMount(() => {
     const menuStorage: string[] = JSON.parse(
-      localStorage.getItem('menus') || '[]',
+      localStorage.getItem('raffles') || '[]',
     );
     setMenuArr(menuStorage.length ? menuStorage : menus);
   });
